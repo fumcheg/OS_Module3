@@ -21,6 +21,7 @@
 # For more information see the manual pages of crontab(5) and cron(8)
 # 
 # m h  dom mon dow   command
+# task2: run script
 30 18 * * 4 /bin/bash /home/fumo/task2.sh
-# logwatch - using config from logwatch.conf (defaults: MailTo = root, Range = yesterday, Detail = Low, Service = All; overriding Output)
+# task3: logwatch - using config from logwatch.conf (defaults: MailTo = root, Range = yesterday, Detail = Low, Service = All; overriding Output)
 0 8 * * * logwatch --output mail
