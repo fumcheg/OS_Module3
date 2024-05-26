@@ -1,1 +1,1 @@
-
+logwatch --detail Low --mailto root --service all --range yesterday
