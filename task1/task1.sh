@@ -36,6 +36,12 @@ echo "##### Configuring /etc/ssh/sshd_config..."
 sed -i -E 's/(^|^#.*)PubkeyAuthentication (no|yes)/PubkeyAuthentication yes/' /etc/ssh/sshd_config
 sed -i -E 's/(^|^#.*)PasswordAuthentication (no|yes)/PasswordAuthentication no/' /etc/ssh/sshd_config
 
+# add firewall rules
+echo "##### Adding firewall rules..."
+ufw allow http
+ufw allow https
+ufw allow ssh
+
 # restart (or start) ssh service
 echo "##### Restarting sshd..."
 systemctl restart sshd
